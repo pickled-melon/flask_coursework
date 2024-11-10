@@ -1,5 +1,15 @@
 {% extends "__layout.html" %}
 
 {% block content %}
-    
+<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+    <div class="list-group list-group-checkable d-grid gap-2 border-0">
+        {% for item in glossary %}
+            <input class="list-group-item-check pe-none" type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios{{loop.index}}" value="" checked="">
+            <label class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios{{loop.index}}">
+                <strong>{{ item.term }}</strong>
+                <span class="d-block medium opacity-30">{{ item.defenition }}</span>
+            </label>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
