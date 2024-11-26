@@ -2,4 +2,36 @@
 
 {% block content %}
 
+<section>
+    <div class="container-xxl">
+        <div class="row align-items-center">
+            <div class="col-8">
+                <h1>Добро пожаловать на сайт, посвящённый Всемирному банку</h1>
+            </div>
+            <div class="col-4">
+                <img class="w-100" src="/static/images/world_bank_building.jpg" alt="Всемирный банк">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-xxl">
+        <div class="row">
+            {% for item in cards%}
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ item.img_link }}" class="card-img-top" alt="{{ item.img_alt }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{ item.desc }}</p>
+                            <a href="#" class="btn btn-primary">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 {% endblock %}
