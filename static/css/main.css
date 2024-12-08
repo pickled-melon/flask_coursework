@@ -6,3 +6,8 @@ section {
 .container-xxl .display-5 {
     text-align: center;
 }
+
+.card {
+    margin: 0 auto;
+    float: none;
+}

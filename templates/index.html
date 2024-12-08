@@ -6,10 +6,10 @@
     <div class="container-xxl">
         <div class="row align-items-center">
             <div class="col-8">
-                <h1>Добро пожаловать на сайт, посвящённый Всемирному банку</h1>
+                <h1>Добро пожаловать на сайт, посвящённый <a href="/glossary#world_bank">Всемирному банку</a></h1>
             </div>
             <div class="col-4">
-                <img class="w-100" src="/static/images/world_bank_building.jpg" alt="Всемирный банк">
+                <img class="w-100" src="/static/images/world_bank_building.jpg" alt="Всемирный банк" title="Всемирный банк">
             </div>
         </div>
     </div>
@@ -19,13 +19,13 @@
     <div class="container-xxl">
         <div class="row">
             {% for item in cards%}
-                <div class="col">
+                <div class="col-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ item.img_link }}" class="card-img-top" alt="{{ item.img_alt }}">
+                        <img src="{{ item.img_link }}" class="card-img-top" alt="{{ item.img_alt }}" title="{{ item.img_alt }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ item.title }}</h5>
                             <p class="card-text">{{ item.desc }}</p>
-                            <a href="#" class="btn btn-primary">Узнать больше</a>
+                            <a href="{{ item.URL }}" class="btn btn-primary">Узнать больше</a>
                         </div>
                     </div>
                 </div>
