@@ -11,3 +11,7 @@ section {
     margin: 0 auto;
     float: none;
 }
+
+.carousel-item a {
+    color:  #ffffff;
+}
