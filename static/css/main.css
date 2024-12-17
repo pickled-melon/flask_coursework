@@ -15,3 +15,7 @@ section {
 .carousel-item a {
     color:  #ffffff;
 }
+
+.main_card {
+    width: 18rem;
+}
