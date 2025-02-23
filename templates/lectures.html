@@ -1,0 +1,23 @@
+{% extends "__layout.html" %}
+
+{% block content %}
+
+<h5 class="display-5">Конспекты</h5>
+
+<section>
+    <div class="container-xxl">
+        <ol>
+            {% for subject in subjects %}
+                <li>{{ subject.name }}
+                    <ol>
+                        {% for topic in subject.topics %}
+                        <li><a href="{{ topic.URL  }}">{{ topic.name }}</a></li>
+                        {% endfor %}
+                    </ol>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+
+{% endblock %}
